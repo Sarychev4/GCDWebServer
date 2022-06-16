@@ -79,7 +79,7 @@ static inline NSDate* _NSDateFromTimeSpec(const struct timespec* t) {
 - (instancetype)initWithFile:(NSString*)path byteRange:(NSRange)range isAttachment:(BOOL)attachment mimeTypeOverrides:(NSDictionary<NSString*, NSString*>*)overrides {
   struct stat info;
   if (lstat([path fileSystemRepresentation], &info) || !(info.st_mode & S_IFREG)) {
-    GWS_DNOT_REACHED();
+//    GWS_DNOT_REACHED();
     return nil;
   }
 #ifndef __LP64__
